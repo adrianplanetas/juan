@@ -4,6 +4,7 @@ import java.io.IOException;
 
 public class MasterMind extends SuperMasterMind implements InterfaceJuegos {
 
+	private static final String JUAN = "¡juan ";
 	private static final String INICIALCOLOR = "Escribe la inicial del color número ";
 	private char [] combinacion;
 	private static int numPartidas = 0;
@@ -86,7 +87,7 @@ pedirJugada (i);
 	public boolean visualizarSalida(boolean acertada, int i, String newParam) {
 		System.out.println ();
 		if (acertada) {
-			System.out.println (quebien + (i-1) +" intentos en la partida nº " + numPartidas);
+			System.out.println (quebien + (i-1) +" intentos en la partida nº " +MasterMind.JUAN+ numPartidas);
 		} else {
 			System.out.println (quepena + numPartidas);
 		}
